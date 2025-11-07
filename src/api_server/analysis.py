@@ -102,3 +102,7 @@ def analyze_address(address: str, chain_id: int) -> dict:
         ))
 
     return graph.to_dict()
+
+if __name__ == '__main__':
+    a = analyze_address('0xE3c1ca5c45818e57B298f3a080c8502BF7154352', 1)
+    print(a)
