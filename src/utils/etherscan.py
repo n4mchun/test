@@ -16,15 +16,9 @@ def fetch_account_api(address: str, chain_id: int, action: str) -> list:
         'apikey': API_KEY
     }
 
-    try:
-        response = requests.get(API_URL, params=params)
-        response.raise_for_status()
-        data = response.json()
+    response = requests.get(API_URL, params=params)
+    response.raise_for_status()
 
-        if data.get('status') == '1':
-            return data.get('result', [])
-        else:
-            return []
-    
-    except:
-        return []
+    data = response.json()
+    result = data.get('result', [])
+    return result
