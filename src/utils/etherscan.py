@@ -1,7 +1,5 @@
 import requests
 import os
-from src.utils.types import Edge
-from src.utils import constants
 
 TOKEN_TX_ACTION = 'tokentx'
 TX_LIST_ACTION = 'txlist'
